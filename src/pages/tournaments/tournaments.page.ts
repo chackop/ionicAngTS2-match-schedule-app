@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { LoadingController, NavController } from 'ionic-angular';
 
 import { TeamsPage } from '../pages';
-// import { EliteApi } from '../../shared/shared';
+import { EliteApi } from '../../shared/shared';
 
 @Component({
   templateUrl: 'tournaments.page.html',
@@ -13,25 +13,25 @@ export class TournamentsPage {
 
   constructor(
     public nav: NavController,
-    // public eliteApi: EliteApi,
+    public eliteApi: EliteApi,
     public loadingController: LoadingController) { }
 
-  // itemTapped($event, tourney) {
-  //   this.nav.push(TeamsPage, tourney);
-  // }
+  itemTapped($event, tourney) {
+    this.nav.push(TeamsPage, tourney);
+  }
 
   ionViewDidLoad() {
-    // let loader = this.loadingController.create({
-    //   content: 'Getting tournaments...'
-    //   //spinner: 'dots'
-    // });
+    let loader = this.loadingController.create({
+      content: 'Getting tournaments...'
+      //spinner: 'dots'
+    });
 
-    // loader.present().then(() => {
-    //   this.eliteApi.getTournaments().then(data => {
-    //     this.tournaments = data;
-    //     loader.dismiss();
-    //   });
-    // });
+    loader.present().then(() => {
+      this.eliteApi.getTournaments().then(data => {
+        this.tournaments = data;
+        loader.dismiss();
+      });
+    });
 
   }
 

@@ -2,10 +2,15 @@ import { Component, ViewChild } from '@angular/core';
 import { Events, LoadingController, Nav, Platform } from 'ionic-angular';
 // import { Splashscreen, StatusBar } from 'ionic-native';
 
-import { MyTeamsPage, 
-  // TeamHomePage, 
-  TournamentsPage } from '../pages/pages';
-// import { EliteApi, UserSettings } from '../shared/shared';
+import {
+  MyTeamsPage,
+  TeamHomePage, 
+  TournamentsPage
+} from '../pages/pages';
+import {
+  EliteApi
+  // , UserSettings 
+} from '../shared/shared';
 
 
 @Component({
@@ -21,8 +26,8 @@ export class MyApp {
   constructor(
     public events: Events,
     public loadingController: LoadingController,
-    public platform: Platform
-    // public eliteApi: EliteApi,
+    public platform: Platform,
+    public eliteApi: EliteApi,
     // public userSettings: UserSettings
   ) {
     this.initializeApp();
@@ -61,7 +66,7 @@ export class MyApp {
   //   this.eliteApi.getTournamentData(favorite.tournamentId).subscribe(l => this.nav.push(TeamHomePage, favorite.team));
   // }
 
-  goToTournaments(){
+  goToTournaments() {
     this.nav.push(TournamentsPage);
   }
 }

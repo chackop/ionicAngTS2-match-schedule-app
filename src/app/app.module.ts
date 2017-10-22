@@ -5,16 +5,19 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { Storage } from '@ionic/storage';
 // import { AgmCoreModule } from 'angular2-google-maps/core'; 
 import { MyApp } from './app.component';
-import { GamePage, MyTeamsPage, TeamDetailPage, TeamsPage, TournamentsPage } from '../pages/pages';
-// import { EliteApi, UserSettings } from '../shared/shared';
+import { GamePage, MyTeamsPage, TeamDetailPage, TeamsPage, TournamentsPage, MapPage, StandingsPage, TeamHomePage } from '../pages/pages';
+import {
+  EliteApi
+  // , UserSettings 
+} from '../shared/shared';
 
 @NgModule({
   declarations: [
     MyApp,
     GamePage,
-    // MapPage,
-    // StandingsPage,
-    // TeamHomePage,
+    MapPage,
+    StandingsPage,
+    TeamHomePage,
     MyTeamsPage,
     TeamDetailPage,
     TeamsPage,
@@ -30,9 +33,9 @@ import { GamePage, MyTeamsPage, TeamDetailPage, TeamsPage, TournamentsPage } fro
   entryComponents: [
     MyApp,
     GamePage,
-    // MapPage,
-    // StandingsPage,
-    // TeamHomePage,    
+    MapPage,
+    StandingsPage,
+    TeamHomePage,
     MyTeamsPage,
     TeamDetailPage,
     TeamsPage,
@@ -40,7 +43,7 @@ import { GamePage, MyTeamsPage, TeamDetailPage, TeamsPage, TournamentsPage } fro
   ],
   providers: [
     // Storage,
-    // EliteApi,    
+    EliteApi
     // UserSettings
   ]
 })
