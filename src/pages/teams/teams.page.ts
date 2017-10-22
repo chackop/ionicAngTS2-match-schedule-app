@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { LoadingController, NavController, NavParams } from 'ionic-angular';
 // import _ from 'lodash';
 
-// import { TeamHomePage } from '../pages';
+import { TeamHomePage } from '../pages';
 // import { EliteApi } from '../../shared/shared';
 
 @Component({
@@ -47,9 +47,9 @@ export class TeamsPage {
 
   }
 
-  // itemTapped($event, team) {
-  //   this.nav.push(TeamHomePage, team);
-  // }
+  itemTapped($event, team) {
+    this.nav.push(TeamHomePage, team);
+  }
 
   // updateTeams() {
   //   let queryTextLower = this.queryText.toLowerCase();
