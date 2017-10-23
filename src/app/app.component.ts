@@ -40,31 +40,31 @@ export class MyApp {
       // StatusBar.styleDefault();
       // Splashscreen.hide();
 
-      // this.userSettings.initStorage().then(() => {
-      //   this.rootPage = MyTeamsPage;
-      //   this.refreshFavorites();
-      //   this.events.subscribe('favorites:changed', () => this.refreshFavorites());
-      // });
+      this.userSettings.initStorage().then(() => {
+        this.rootPage = MyTeamsPage;
+        this.refreshFavorites();
+        this.events.subscribe('favorites:changed', () => this.refreshFavorites());
+      });
     });
   }
 
-  // refreshFavorites(){
-  //   this.userSettings.getAllFavorites().then(favs => this.favoriteTeams = favs);
-  //   //this.favoriteTeams = this.userSettings.getAllFavorites();
-  // }
+  refreshFavorites() {
+    this.userSettings.getAllFavorites().then(favs => this.favoriteTeams = favs);
+    //this.favoriteTeams = this.userSettings.getAllFavorites();
+  }
 
   goHome() {
     this.nav.push(MyTeamsPage);
   }
 
-  // goToTeam(favorite){
-  //   let loader = this.loadingController.create({
-  //       content: 'Getting data...',
-  //       dismissOnPageChange: true
-  //   });
-  //   loader.present();
-  //   this.eliteApi.getTournamentData(favorite.tournamentId).subscribe(l => this.nav.push(TeamHomePage, favorite.team));
-  // }
+  goToTeam(favorite) {
+    let loader = this.loadingController.create({
+      content: 'Getting data...',
+      dismissOnPageChange: true
+    });
+    loader.present();
+    this.eliteApi.getTournamentData(favorite.tournamentId).subscribe(l => this.nav.push(TeamHomePage, favorite.team));
+  }
 
   goToTournaments() {
     this.nav.push(TournamentsPage);
