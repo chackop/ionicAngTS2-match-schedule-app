@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import {
-  // MapPage, 
+  MapPage,
   TeamHomePage
 } from '../pages';
 
 import { EliteApi } from '../../shared/shared';
-// declare var window: any;
+declare var window: any;
 
 @Component({
   templateUrl: 'game.page.html',
@@ -32,15 +32,15 @@ export class GamePage {
     this.nav.push(TeamHomePage, team);
   }
 
-  // goToDirections(){
-  //   let tourneyData = this.eliteApi.getCurrentTourney();
-  //   let location = tourneyData.locations[this.game.locationId];
-  //   window.location = `geo:${location.latitude},${location.longitude};u=35;`;
-  // }
+  goToDirections() {
+    let tourneyData = this.eliteApi.getCurrentTourney();
+    let location = tourneyData.locations[this.game.locationId];
+    window.location = `geo:${location.latitude},${location.longitude};u=35;`;
+  }
 
-  // goToMap(){
-  //   this.nav.push(MapPage, this.game);
-  // }
+  goToMap() {
+    this.nav.push(MapPage, this.game);
+  }
 
   isWinner(score1, score2) {
     //return Number(score1) > Number(score2);
