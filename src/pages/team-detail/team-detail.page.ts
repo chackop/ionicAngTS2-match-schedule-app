@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { AlertController, NavController, NavParams, ToastController } from 'ionic-angular';
 
-import _ from 'lodash';
-// import moment from 'moment';
+import * as _ from 'lodash';
+import * as moment from 'moment';
 
 import { GamePage } from '../pages';
 import {
@@ -86,13 +86,13 @@ export class TeamDetailPage {
   //   return game.scoreDisplay.indexOf('W:') === 0 ? 'primary' : 'danger';
   // } 
 
-  // dateChanged(){
-  //   if (this.useDateFilter) {
-  //     this.games = _.filter(this.allGames, g => moment(g.time).isSame(this.dateFilter, 'day'));
-  //   } else {
-  //     this.games = this.allGames;
-  //   } 
-  // }
+  dateChanged(){
+    if (this.useDateFilter) {
+      this.games = _.filter(this.allGames, g => moment(g.time).isSame(this.dateFilter, 'day'));
+    } else {
+      this.games = this.allGames;
+    } 
+  }
 
   // toggleFollow(){
   //   if (this.isFollowing) {
