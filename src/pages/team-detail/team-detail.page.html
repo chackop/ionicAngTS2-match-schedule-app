@@ -7,7 +7,7 @@
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <!-- <ion-card>
+    <ion-card>
         <ion-card-content>
             <ion-row>
                 <ion-col width-50>
@@ -27,12 +27,10 @@
             <ion-item>
                 <ion-label>Date Filter:</ion-label>
                 <ion-toggle [(ngModel)]="useDateFilter" (ionChange)="dateChanged()"></ion-toggle>
-                <ion-datetime displayFormat="M/D/YYYY" pickerFormat="M/D/YYYY"
-                    [(ngModel)]="dateFilter" (ionChange)="dateChanged()"
-                    [(disabled)]="!useDateFilter"></ion-datetime>
+                <ion-datetime displayFormat="M/D/YYYY" pickerFormat="M/D/YYYY" [(ngModel)]="dateFilter" (ionChange)="dateChanged()" [(disabled)]="!useDateFilter"></ion-datetime>
             </ion-item>
         </ion-card-content>
-    </ion-card> -->
+    </ion-card>
 
 
     <ion-list>

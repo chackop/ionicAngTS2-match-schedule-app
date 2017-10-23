@@ -54,8 +54,8 @@ export class TeamDetailPage {
       })
       .value();
 
-    // this.allGames = this.games;
-    // this.teamStanding = _.find(this.tourneyData.standings, { 'teamId': this.team.id });
+    this.allGames = this.games;
+    this.teamStanding = _.find(this.tourneyData.standings, { 'teamId': this.team.id });
     // this.userSettings.isFavoriteTeam(this.team.id).then(value => this.isFollowing = value);
 
   }
