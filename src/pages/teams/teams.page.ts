@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LoadingController, NavController, NavParams } from 'ionic-angular';
-// import _ from 'lodash';
+import _ from 'lodash';
 
 import { TeamHomePage } from '../pages';
 import { EliteApi } from '../../shared/shared';
@@ -22,7 +22,7 @@ export class TeamsPage {
   ) { }
 
   ionViewDidLoad() {
-    //console.log('**lodash debug', lodash, _); 
+    // console.log('**lodash debug', lodash, _); 
     let selectedTourney = this.navParams.data;
 
     let loader = this.loadingController.create({
