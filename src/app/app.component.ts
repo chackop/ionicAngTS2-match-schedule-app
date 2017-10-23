@@ -4,12 +4,12 @@ import { Events, LoadingController, Nav, Platform } from 'ionic-angular';
 
 import {
   MyTeamsPage,
-  TeamHomePage, 
+  TeamHomePage,
   TournamentsPage
 } from '../pages/pages';
 import {
   EliteApi
-  // , UserSettings 
+  , UserSettings
 } from '../shared/shared';
 
 
@@ -28,7 +28,7 @@ export class MyApp {
     public loadingController: LoadingController,
     public platform: Platform,
     public eliteApi: EliteApi,
-    // public userSettings: UserSettings
+    public userSettings: UserSettings
   ) {
     this.initializeApp();
   }

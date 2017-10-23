@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { BrowserModule } from '@angular/platform-browser';
-// import { Storage } from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 // import { AgmCoreModule } from 'angular2-google-maps/core'; 
 import { MyApp } from './app.component';
 import { GamePage, MyTeamsPage, TeamDetailPage, TeamsPage, TournamentsPage, MapPage, StandingsPage, TeamHomePage } from '../pages/pages';
 import {
   EliteApi
-  // , UserSettings 
+  , UserSettings
 } from '../shared/shared';
 
 @NgModule({
@@ -42,9 +42,9 @@ import {
     TournamentsPage
   ],
   providers: [
-    // Storage,
-    EliteApi
-    // UserSettings
+    Storage,
+    EliteApi,
+    UserSettings
   ]
 })
 export class AppModule { }

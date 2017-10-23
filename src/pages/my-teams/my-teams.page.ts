@@ -8,7 +8,7 @@ import {
 
 import {
     EliteApi
-    // , UserSettings
+    , UserSettings
 } from '../../shared/shared';
 
 @Component({
@@ -32,8 +32,8 @@ export class MyTeamsPage {
     constructor(
         public loadingController: LoadingController,
         public nav: NavController,
-        public eliteApi: EliteApi
-        // public userSettings: UserSettings
+        public eliteApi: EliteApi,
+        public userSettings: UserSettings
     ) { }
 
     favoriteTapped($event, favorite) {
@@ -50,8 +50,8 @@ export class MyTeamsPage {
         this.nav.push(TournamentsPage);
     }
 
-    // ionViewDidEnter(){
-    //     //this.favorites = this.userSettings.getAllFavorites();
-    //     this.userSettings.getAllFavorites().then(favs => this.favorites = favs);
-    // }
+    ionViewDidEnter() {
+        //this.favorites = this.userSettings.getAllFavorites();
+        this.userSettings.getAllFavorites().then(favs => this.favorites = favs);
+    }
 }
