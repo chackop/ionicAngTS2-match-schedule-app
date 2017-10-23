@@ -61,6 +61,6 @@ export class TeamsPage {
       }
     });
 
-    //   this.teams = filteredTeams;
-    // }
+    this.teams = filteredTeams;
   }
+}
