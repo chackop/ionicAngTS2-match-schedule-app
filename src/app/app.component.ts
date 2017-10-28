@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Events, LoadingController, Nav, Platform } from 'ionic-angular';
-// import { Splashscreen, StatusBar } from 'ionic-native';
+import { Splashscreen, StatusBar } from 'ionic-native';
 
 import {
   MyTeamsPage,

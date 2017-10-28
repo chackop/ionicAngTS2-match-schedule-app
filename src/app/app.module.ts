@@ -26,8 +26,8 @@ import {
   imports: [
     IonicModule.forRoot(MyApp),
     HttpModule,
-    BrowserModule
-    // AgmCoreModule.forRoot({ apiKey: 'AIzaSyBbsOlMryAHu2ESwHHSwrDBIUU7fiENNoM' })
+    BrowserModule,
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyBbsOlMryAHu2ESwHHSwrDBIUU7fiENNoM' })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
